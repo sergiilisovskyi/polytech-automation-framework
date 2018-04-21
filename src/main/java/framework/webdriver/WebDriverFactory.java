@@ -34,11 +34,8 @@ public class WebDriverFactory {
 	/**
 	 * Gets the single instance of WebDriverFactory.
 	 * 
-	 * @param browser
-	 *            the browser set in properties
+	 * @param browser - the browser set in properties
 	 * @return single instance of WebDriverFactory
-	 * @throws Exception
-	 *             the exception of invalid browser property
 	 */
 	public static WebDriver getInstance(String browser) {
 		WebDriver webDriver = null;

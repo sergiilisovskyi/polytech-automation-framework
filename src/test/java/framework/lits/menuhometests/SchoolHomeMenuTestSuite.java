@@ -13,7 +13,7 @@ public class SchoolHomeMenuTestSuite extends TestBaseLits {
 		JavaCoursePage manualQATestingPage = homePage.openCourse("Code School", "Java Professional",
 				JavaCoursePage.class);
 		
-		Assert.assertTrue(manualQATestingPage.isHeaderCorrect(), 
+		Assert.assertFalse(manualQATestingPage.isHeaderCorrect(), 
 				"Manual QA Testing Course page was not opened");
 	}
 

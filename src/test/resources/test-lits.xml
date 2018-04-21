@@ -4,9 +4,9 @@
 	<!-- <parameter name="browserName" value="firefox"/> -->
 	<test name="TestLQAS">
 		<classes>
+			<class name="framework.lits.menuhometests.ContactHomeMenuTestSuite" />
 			<class name="framework.lits.signupstudenttests.SignUpStudentPageTestSuite" />
 			<class name="framework.lits.hometests.HomePageTestSuite" />
-			<class name="framework.lits.menuhometests.ContactHomeMenuTestSuite" />
 			<class name="framework.lits.menuhometests.SchoolHomeMenuTestSuite" />
 		</classes>
 	</test>

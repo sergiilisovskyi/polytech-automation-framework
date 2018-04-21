@@ -3,18 +3,21 @@ package framework.utility;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.imageio.ImageIO;
 
+import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 
 import framework.webdriver.WebDriverFactory;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.coordinates.WebDriverCoordsProvider;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class TestResultListener extends TestListenerAdapter {
 
@@ -68,23 +71,23 @@ public class TestResultListener extends TestListenerAdapter {
 		testScreenshotOnFinish();
 	}
 
+	@Step("Screenshot on failed test")
 	public void testScreenshotOnFinish() {
-		Allure.addAttachment("Screenshot after test", "image/png", getScreenshotByteArray(), "png");
+		Allure.addAttachment("Screenshot on failure", "image/png", getScreenshotByteIS(WebDriverFactory.getSetDriver()), "png");
 	}
-
-	public ByteArrayInputStream getScreenshotByteArray() {
-		AShot ashot = new AShot().coordsProvider(new WebDriverCoordsProvider());
-		Screenshot screenImage = ashot.takeScreenshot(WebDriverFactory.getSetDriver());
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		
-		try {
-			ImageIO.write(screenImage.getImage(), "png", baos);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		byte[] screeshotByteArray = baos.toByteArray();
-        
-		return new ByteArrayInputStream(screeshotByteArray);
-	}
+	
+	private static InputStream getScreenshotByteIS(WebDriver driver) {
+		Screenshot screenImage = new AShot()
+						  .shootingStrategy(ShootingStrategies.viewportPasting(150))
+						  .takeScreenshot(driver);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        try {
+        		ImageIO.write(screenImage.getImage(), "png", baos);
+        } catch (IOException e) {
+             e.printStackTrace();
+        }
+           
+        return new ByteArrayInputStream(new ByteArrayOutputStream().toByteArray());
+    }
 
 }
