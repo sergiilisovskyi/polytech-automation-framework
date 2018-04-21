@@ -1,6 +1,4 @@
-CWSeed-Gradle-Android.apk
-CW-Gradle-Android.apk
-CW-Gradle-Android-amazon.apk
+.idea/*
 .DS_Store
 .allure
 .classpath
