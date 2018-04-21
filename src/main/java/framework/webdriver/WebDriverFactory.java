@@ -66,6 +66,7 @@ public class WebDriverFactory {
 			eventDriver = new EventFiringWebDriver(webDriver);
 			eventDriver.register(new WebDriverListener());
 
+			eventDriver.manage().deleteAllCookies();
 			eventDriver.manage().timeouts()
 					.implicitlyWait(Integer.valueOf(PropertyLoader.loadProperty("implicit.timeout")), TimeUnit.SECONDS);
 			eventDriver.manage().window().maximize();

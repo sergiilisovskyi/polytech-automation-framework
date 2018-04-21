@@ -1,4 +1,4 @@
-package framework.rozetka.testcase;
+package framework.autoria.testcase;
 
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
@@ -6,18 +6,18 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import framework.pages.LitsPageFactory;
-import framework.pages.rozetka.RozetkaHomePage;
+import framework.pages.autoria.AutoRiaHomePage;
 import framework.utility.LogFactory;
 import framework.utility.PropertyLoader;
 import framework.webdriver.WebDriverFactory;
 
-public class TestBaseRozetka {
+public class TestBaseAutoRia {
 	
-	private static final Logger LOG = LogFactory.getLogger(TestBaseRozetka.class);
+	private static final Logger LOG = LogFactory.getLogger(TestBaseAutoRia.class);
 
 	protected WebDriver webDriver;
 	
-	protected RozetkaHomePage rozetkaHomePage;
+	protected AutoRiaHomePage autoRiaHomePage;
 
 	@BeforeMethod
 	public void setup() {
@@ -25,9 +25,9 @@ public class TestBaseRozetka {
 		webDriver = WebDriverFactory.getInstance(browserName);
 		
 		LOG.info("Navigating to test url");
-		webDriver.get(PropertyLoader.loadProperty("testsite3.url"));
+		webDriver.get(PropertyLoader.loadProperty("testsite5.url"));
 		
-		rozetkaHomePage = LitsPageFactory.initElements(webDriver, RozetkaHomePage.class);
+		autoRiaHomePage = LitsPageFactory.initElements(webDriver, AutoRiaHomePage.class);
 	}
 
 	@AfterMethod(alwaysRun = true)
