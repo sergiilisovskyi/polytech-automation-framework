@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestRozetka" verbose="5">
+	<test name="TestRozetka">
+		<classes>
+			<class name="framework.rozetka.search.RozetkaSearchTestSuite" />
+		</classes>
+	</test>
+</suite>
