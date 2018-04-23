@@ -9,7 +9,7 @@ import framework.pages.autoria.AutoRiaSearchResultsPage;
 public class AutoRiaSearchTestSuite extends TestBaseAutoRia {
 
 	@Test
-	public void sasmusngSearchTest() {
+	public void autoRiaSearchTest() throws InterruptedException {
 		AutoRiaSearchResultsPage autoRiaSearchResultsPage = autoRiaHomePage
 				.clickAdvancedSearch()
 				.searchCarByBrandNameAndModelName("Bentley", "Continental");
