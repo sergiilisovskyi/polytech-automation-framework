@@ -1,6 +1,7 @@
 package framework.utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
@@ -157,6 +158,18 @@ public class WebDriverListener implements WebDriverEventListener {
 
 	@Override
 	public void afterSwitchToWindow(String windowName, WebDriver driver) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <X> void beforeGetScreenshotAs(OutputType<X> target) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <X> void afterGetScreenshotAs(OutputType<X> target, X screenshot) {
 		// TODO Auto-generated method stub
 		
 	}
