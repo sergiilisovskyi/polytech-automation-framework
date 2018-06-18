@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -27,7 +27,7 @@ public class PlanetaKinoMovieDetailsPage extends Page {
 	public PlanetaKinoSeatSelectionPage selectFirstAvailableStreamTomorrow() {
 		tomorrowButton.click();
 		firstAvailableStreamTomorrow.click();
-		return LitsPageFactory.initElements(webDriver, PlanetaKinoSeatSelectionPage.class);
+		return PolytechPageFactory.initElements(webDriver, PlanetaKinoSeatSelectionPage.class);
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package framework.pages.lits.enterapplication;
+package framework.pages.polytech.enterapplication;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;

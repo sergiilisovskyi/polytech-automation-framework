@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -32,7 +32,7 @@ public class RozetkaHomePage extends Page {
 		searchTextField.sendKeys(productName);
 		searchButton.click();
 		
-		return LitsPageFactory.initElements(webDriver, RozetkaSearchResultsPage.class);
+		return PolytechPageFactory.initElements(webDriver, RozetkaSearchResultsPage.class);
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -33,7 +33,7 @@ public class PlanetaKinoLoginPopUp extends Page {
 		passwordTextField.sendKeys(password);
 		signinButton.click();
 		
-		return LitsPageFactory.initElements(webDriver, PlanetaKinoCartPage.class);
+		return PolytechPageFactory.initElements(webDriver, PlanetaKinoCartPage.class);
 	}
 
 	@Override

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -24,7 +24,7 @@ public class PlanetaKinoHomePage extends Page {
 	@Step("Click on movie by index: {movieIndex}")
 	public PlanetaKinoMovieDetailsPage clickOnMovieByIndex(int movieIndex) {
 		moviesList.get(movieIndex).click();
-		return LitsPageFactory.initElements(webDriver, PlanetaKinoMovieDetailsPage.class);
+		return PolytechPageFactory.initElements(webDriver, PlanetaKinoMovieDetailsPage.class);
 	}
 
 	@Override

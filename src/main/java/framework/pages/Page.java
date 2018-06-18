@@ -12,7 +12,7 @@ import framework.utility.LogFactory;
 
 /*
  * Abstract class representation of a Page in the UI with additional features. Page object pattern
- * @author Taras Lytvyn
+ * @author Sergii Lisovskyi
  */
 public abstract class Page implements IPageLoaded {
 	

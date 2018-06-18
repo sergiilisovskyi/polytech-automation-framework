@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -38,14 +38,14 @@ public class MyhitMoviePage extends Page {
 			}
 			actorsList.get(index).click();
 			
-			return LitsPageFactory.initElements(webDriver, MyhitActorPage.class);
+			return PolytechPageFactory.initElements(webDriver, MyhitActorPage.class);
 		} else throw new IllegalStateException("Actors list is empty");
 	}
 
 	@Step("Click on director")
 	public MyhitDirectorPage clickOnDirector() {
 		directorLink.click();
-		return LitsPageFactory.initElements(webDriver, MyhitDirectorPage.class);
+		return PolytechPageFactory.initElements(webDriver, MyhitDirectorPage.class);
 	}
 	
 	@Override

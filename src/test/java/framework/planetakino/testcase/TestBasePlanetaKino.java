@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.planetakino.PlanetaKinoHomePage;
 import framework.utility.LogFactory;
 import framework.utility.PropertyLoader;
@@ -29,7 +29,7 @@ public class TestBasePlanetaKino {
 		LOG.info("Navigating to test url");
 		webDriver.get(PropertyLoader.loadProperty("testsite6.url"));
 		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		planetaKinoHomePage = LitsPageFactory.initElements(webDriver, PlanetaKinoHomePage.class);
+		planetaKinoHomePage = PolytechPageFactory.initElements(webDriver, PlanetaKinoHomePage.class);
 	}
 
 	@AfterMethod(alwaysRun = true)

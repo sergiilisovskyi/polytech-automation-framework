@@ -1,4 +1,4 @@
-package framework.pages.lits.homemenu;
+package framework.pages.polytech.homemenu;
 
 import java.util.List;
 

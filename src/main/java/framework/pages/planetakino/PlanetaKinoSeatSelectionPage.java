@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -43,7 +43,7 @@ public class PlanetaKinoSeatSelectionPage extends Page {
 		getWebDriverWait(5).until(wait -> addToCartButton.isEnabled());
 		jsClickOnElement(addToCartButton);
 		
-		return LitsPageFactory.initElements(webDriver, PlanetaKinoLoginPopUp.class);
+		return PolytechPageFactory.initElements(webDriver, PlanetaKinoLoginPopUp.class);
 	}
 
 	@Override

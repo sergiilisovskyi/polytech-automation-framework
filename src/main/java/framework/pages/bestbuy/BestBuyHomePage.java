@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 
 public class BestBuyHomePage extends Page {
@@ -28,7 +28,7 @@ public class BestBuyHomePage extends Page {
 	public BestBuySearchResultsPage searchForItem(String itemName) {
 		searchInputTextField.sendKeys(itemName);
 		searchButton.click();
-		return LitsPageFactory.initElements(webDriver, BestBuySearchResultsPage.class);
+		return PolytechPageFactory.initElements(webDriver, BestBuySearchResultsPage.class);
 	}
 
 	@Override

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 
 public class BestBuyHelloPage extends Page {
@@ -28,7 +28,7 @@ public class BestBuyHelloPage extends Page {
 		countrySelectDropDown.selectByVisibleText(countryName);
 		goButton.click();
 		
-		return LitsPageFactory.initElements(webDriver, BestBuyHomePage.class);
+		return PolytechPageFactory.initElements(webDriver, BestBuyHomePage.class);
 	}
 	
 	@Override

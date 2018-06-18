@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -26,7 +26,7 @@ public class PlanetaKinoCartPage extends Page {
 			Thread.sleep(4000);
 		} catch (InterruptedException e) {}
 		jsClickOnElement(payButton);
-		return LitsPageFactory.initElements(webDriver, PlanetaKinoPaymentPage.class);
+		return PolytechPageFactory.initElements(webDriver, PlanetaKinoPaymentPage.class);
 	}
 
 	@Override

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -36,7 +36,7 @@ public class RozetkaSearchResultsPage extends Page {
 			
 			searchResultItemsList.get(index).click();
 			
-			return LitsPageFactory.initElements(webDriver, RozetkaItemPage.class);
+			return PolytechPageFactory.initElements(webDriver, RozetkaItemPage.class);
 		} else throw new IllegalStateException("Search result is empty");
 	}
 

@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.myhit.MyhitHomePage;
 import framework.utility.LogFactory;
 import framework.utility.PropertyLoader;
@@ -27,7 +27,7 @@ public class TestBaseMyHit {
 		LOG.info("Navigating to test url");
 		webDriver.get(PropertyLoader.loadProperty("testsite2.url"));
 		
-		myhitHomePage = LitsPageFactory.initElements(webDriver, MyhitHomePage.class);
+		myhitHomePage = PolytechPageFactory.initElements(webDriver, MyhitHomePage.class);
 	}
 
 	@AfterMethod(alwaysRun = true)

@@ -1,4 +1,4 @@
-package framework.pages.lits.schoolcourses;
+package framework.pages.polytech.schoolcourses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

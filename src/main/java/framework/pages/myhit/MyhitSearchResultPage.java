@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -28,7 +28,7 @@ public class MyhitSearchResultPage extends Page {
 				throw new IllegalArgumentException("There is no movie in search list with index " + index);
 			}
 			moviesSearchResult.get(index).click();
-			return LitsPageFactory.initElements(webDriver, MyhitMoviePage.class);
+			return PolytechPageFactory.initElements(webDriver, MyhitMoviePage.class);
 		} else throw new IllegalStateException("Search movie list is empty");
 	}
 

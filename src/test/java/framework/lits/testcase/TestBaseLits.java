@@ -5,8 +5,8 @@ import org.slf4j.Logger;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import framework.pages.LitsPageFactory;
-import framework.pages.lits.enterapplication.HomePage;
+import framework.pages.PolytechPageFactory;
+import framework.pages.polytech.enterapplication.HomePage;
 import framework.utility.LogFactory;
 import framework.utility.PropertyLoader;
 import framework.webdriver.WebDriverFactory;
@@ -16,7 +16,7 @@ import framework.webdriver.WebDriverFactory;
 /*
  * Base class for all the test classes
  * 
- * @author Taras Lytvyn
+ * @author Sergii Lisovskyi
  */
 
 public class TestBaseLits {
@@ -34,7 +34,7 @@ public class TestBaseLits {
 
 		LOG.info("Navigating to test url");
 		webDriver.get(PropertyLoader.loadProperty("testsite1.url"));
-		homePage = LitsPageFactory.initElements(webDriver, HomePage.class);
+		homePage = PolytechPageFactory.initElements(webDriver, HomePage.class);
 	}
 
 	@AfterMethod(alwaysRun = true)

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -26,7 +26,7 @@ public class AutoRiaHomePage extends Page {
 	@Step("Advanced search button click")
 	public AutoRiaAdvancedSearchPage clickAdvancedSearch() {
 		advancedSearchButton.click();
-		return LitsPageFactory.initElements(webDriver, AutoRiaAdvancedSearchPage.class);
+		return PolytechPageFactory.initElements(webDriver, AutoRiaAdvancedSearchPage.class);
 	}
 
 	@Override

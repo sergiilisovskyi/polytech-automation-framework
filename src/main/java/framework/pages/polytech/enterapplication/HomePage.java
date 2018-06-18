@@ -1,4 +1,4 @@
-package framework.pages.lits.enterapplication;
+package framework.pages.polytech.enterapplication;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +11,9 @@ import org.slf4j.Logger;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
-import framework.pages.lits.homemenu.ContactsPage;
+import framework.pages.polytech.homemenu.ContactsPage;
 import framework.utility.LogFactory;
 import io.qameta.allure.Step;
 
@@ -52,13 +52,13 @@ public class HomePage extends Page {
 	@Step("Clicking on become student button")
 	public BecomeStudentPage clickOnBecomeStudent() {
 		jsClickOnElement(becomeStudentButton);
-		return LitsPageFactory.initElements(webDriver, BecomeStudentPage.class);
+		return PolytechPageFactory.initElements(webDriver, BecomeStudentPage.class);
 	}
 	
 	@Step("Openinig contacts menu")
 	public ContactsPage openContactsMenu() {
 		jsClickOnElement(contactsMenuButton);
-		return LitsPageFactory.initElements(webDriver, ContactsPage.class);
+		return PolytechPageFactory.initElements(webDriver, ContactsPage.class);
 	}
 	
 	@Step("Openinig schoolname by name: {schoolName} and course name by name: {expectedPageClazz}")
@@ -70,7 +70,7 @@ public class HomePage extends Page {
 		wait.until(ExpectedConditions.visibilityOf(courses));
 		courses.findElement(By.xpath(".//ul//a[contains(text(),'" + course + "')]")).click();
 		
-		return LitsPageFactory.initElements(webDriver, expectedPageClazz);
+		return PolytechPageFactory.initElements(webDriver, expectedPageClazz);
 	}
 
 	@Override

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.google.common.base.Function;
 
-import framework.pages.LitsPageFactory;
+import framework.pages.PolytechPageFactory;
 import framework.pages.Page;
 import io.qameta.allure.Step;
 
@@ -47,7 +47,7 @@ public class AutoRiaAdvancedSearchPage extends Page {
 		searchCarByModelResultList.stream().filter(car -> car.getText().contains(carModelName)).findFirst().get().click();
 		showResultsButton.click();
 		
-		return LitsPageFactory.initElements(webDriver, AutoRiaSearchResultsPage.class);
+		return PolytechPageFactory.initElements(webDriver, AutoRiaSearchResultsPage.class);
 	}
 
 	@Override

@@ -4,8 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import framework.lits.testcase.TestBaseLits;
-import framework.pages.lits.enterapplication.BecomeStudentPage;
-import framework.pages.lits.homemenu.ContactsPage;
+import framework.pages.polytech.enterapplication.BecomeStudentPage;
+import framework.pages.polytech.homemenu.ContactsPage;
 
 public class SignUpStudentPageTestSuite extends TestBaseLits {
 

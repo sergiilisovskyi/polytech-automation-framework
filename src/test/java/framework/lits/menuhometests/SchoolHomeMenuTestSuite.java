@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import framework.lits.testcase.TestBaseLits;
-import framework.pages.lits.schoolcourses.JavaCoursePage;
+import framework.pages.polytech.schoolcourses.JavaCoursePage;
 
 public class SchoolHomeMenuTestSuite extends TestBaseLits {
 
